@@ -19,6 +19,7 @@ import { NAV, HEADER } from './config-layout';
 import AccountPopover from './common/account-popover';
 import LanguagePopover from './common/language-popover';
 import NotificationsPopover from './common/notifications-popover';
+import { Container } from '@mui/system';
 
 // ----------------------------------------------------------------------
 
@@ -34,12 +35,14 @@ export default function Header({ onOpenNav }) {
           <Iconify icon="eva:menu-2-fill" />
         </IconButton>
       )}
-      <Typography variant="p" sx={{ mt:5, mb: 5, color: 'black' }}>
-        Hi, Srishti
-      </Typography>
-      <Typography variant="h4" sx={{mt:5, mb: 5, color: 'black' }}>
-        Welcome Back
-      </Typography>
+      <Container sx={{ display: 'flex', flexDirection: 'column', mt: 5, mb: 5 }}>
+        <Typography component="div" sx={{ color: 'black', textAlign: 'left', display: 'inline-block' }}>
+          <Typography component="p">Hi, Srishti</Typography>
+          <Typography component="h4" variant="h4">
+            Welcome Back
+          </Typography>
+        </Typography>
+      </Container>
 
       <Searchbar />
 

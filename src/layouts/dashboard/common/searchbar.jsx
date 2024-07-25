@@ -33,10 +33,24 @@ const StyledSearchbar = styled('div')(({ theme }) => ({
   height: HEADER_MOBILE,
   padding: theme.spacing(0, 3),
   boxShadow: theme.customShadows.z8,
+  borderRadius: theme.shape.borderRadius,
   [theme.breakpoints.up('md')]: {
     height: HEADER_DESKTOP,
     padding: theme.spacing(0, 5),
   },
+}));
+
+const Separator = styled('div')(({ theme }) => ({
+  width: '1px',
+  height: '24px',
+  backgroundColor: 'white',
+  margin: theme.spacing(0, 2),
+}));
+
+const LocationText = styled('p')(({ theme }) => ({
+  color: 'black',
+  margin: 0,
+  fontWeight: theme.typography.fontWeightBold,
 }));
 
 // ----------------------------------------------------------------------
@@ -78,7 +92,8 @@ export default function Searchbar() {
               }
               sx={{ mr: 1, fontWeight: 'fontWeightBold' }}
             />
-            <p>Location</p>
+             <Separator />
+             <LocationText>Location</LocationText>
             <Button variant="contained" onClick={handleClose}>
               Search
             </Button>
