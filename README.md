@@ -1,2 +1,2 @@
-## triangleinvestmentpanel
+## doctors-appointment-dashboard
 
