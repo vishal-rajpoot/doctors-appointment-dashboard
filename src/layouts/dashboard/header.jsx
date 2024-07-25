@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import AppBar from '@mui/material/AppBar';
+import { Typography } from '@mui/material';
 import Toolbar from '@mui/material/Toolbar';
 import { useTheme } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
@@ -33,6 +34,12 @@ export default function Header({ onOpenNav }) {
           <Iconify icon="eva:menu-2-fill" />
         </IconButton>
       )}
+      <Typography variant="p" sx={{ mt:5, mb: 5, color: 'black' }}>
+        Hi, Srishti
+      </Typography>
+      <Typography variant="h4" sx={{mt:5, mb: 5, color: 'black' }}>
+        Welcome Back
+      </Typography>
 
       <Searchbar />
 

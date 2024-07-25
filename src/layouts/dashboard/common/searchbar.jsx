@@ -26,8 +26,10 @@ const StyledSearchbar = styled('div')(({ theme }) => ({
   zIndex: 99,
   width: '100%',
   display: 'flex',
-  position: 'absolute',
+  // position: 'absolute',
   alignItems: 'center',
+  justifyContent: 'center',
+  background: '#CBC3E3',
   height: HEADER_MOBILE,
   padding: theme.spacing(0, 3),
   boxShadow: theme.customShadows.z8,
@@ -59,13 +61,13 @@ export default function Searchbar() {
           </IconButton>
         )}
 
-        <Slide direction="down" in={open} mountOnEnter unmountOnExit>
+        {/* <Slide direction="down" in={open} mountOnEnter unmountOnExit> */}
           <StyledSearchbar>
             <Input
               autoFocus
               fullWidth
               disableUnderline
-              placeholder="Search…"
+              placeholder="Find Doctors"
               startAdornment={
                 <InputAdornment position="start">
                   <Iconify
@@ -76,11 +78,12 @@ export default function Searchbar() {
               }
               sx={{ mr: 1, fontWeight: 'fontWeightBold' }}
             />
+            <p>Location</p>
             <Button variant="contained" onClick={handleClose}>
               Search
             </Button>
           </StyledSearchbar>
-        </Slide>
+        {/* </Slide> */}
       </div>
     </ClickAwayListener>
   );
