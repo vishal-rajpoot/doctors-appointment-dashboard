@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import AppBar from '@mui/material/AppBar';
+import { Typography } from '@mui/material';
 import Toolbar from '@mui/material/Toolbar';
 import { useTheme } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
@@ -18,6 +19,7 @@ import { NAV, HEADER } from './config-layout';
 import AccountPopover from './common/account-popover';
 import LanguagePopover from './common/language-popover';
 import NotificationsPopover from './common/notifications-popover';
+import { Container } from '@mui/system';
 
 // ----------------------------------------------------------------------
 
@@ -33,6 +35,14 @@ export default function Header({ onOpenNav }) {
           <Iconify icon="eva:menu-2-fill" />
         </IconButton>
       )}
+      <Container sx={{ display: 'flex', flexDirection: 'column', mt: 5, mb: 5 }}>
+        <Typography component="div" sx={{ color: 'black', textAlign: 'left', display: 'inline-block' }}>
+          <Typography component="p">Hi, Srishti</Typography>
+          <Typography component="h4" variant="h4">
+            Welcome Back
+          </Typography>
+        </Typography>
+      </Container>
 
       <Searchbar />
 

@@ -21,11 +21,11 @@ import AppConversionRates from '../app-conversion-rates';
 export default function AppView() {
   return (
     <Container maxWidth="xl">
-      <Typography variant="h4" sx={{ mb: 5 }}>
+      {/* <Typography variant="h4" sx={{ mb: 5 }}>
         Hi, Welcome Admin 👋
-      </Typography>
+      </Typography> */}
 
-      <Grid container spacing={3}>
+      {/* <Grid container spacing={3}>
         <Grid xs={12} sm={6} md={3}>
           <AppWidgetSummary
             title="Weekly Sales"
@@ -224,7 +224,7 @@ export default function AppView() {
             ]}
           />
         </Grid>
-      </Grid>
+      </Grid> */}
     </Container>
   );
 }

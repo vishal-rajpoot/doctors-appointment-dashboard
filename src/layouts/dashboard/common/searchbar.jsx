@@ -26,15 +26,31 @@ const StyledSearchbar = styled('div')(({ theme }) => ({
   zIndex: 99,
   width: '100%',
   display: 'flex',
-  position: 'absolute',
+  // position: 'absolute',
   alignItems: 'center',
+  justifyContent: 'center',
+  background: '#CBC3E3',
   height: HEADER_MOBILE,
   padding: theme.spacing(0, 3),
   boxShadow: theme.customShadows.z8,
+  borderRadius: theme.shape.borderRadius,
   [theme.breakpoints.up('md')]: {
     height: HEADER_DESKTOP,
     padding: theme.spacing(0, 5),
   },
+}));
+
+const Separator = styled('div')(({ theme }) => ({
+  width: '1px',
+  height: '24px',
+  backgroundColor: 'white',
+  margin: theme.spacing(0, 2),
+}));
+
+const LocationText = styled('p')(({ theme }) => ({
+  color: 'black',
+  margin: 0,
+  fontWeight: theme.typography.fontWeightBold,
 }));
 
 // ----------------------------------------------------------------------
@@ -59,13 +75,13 @@ export default function Searchbar() {
           </IconButton>
         )}
 
-        <Slide direction="down" in={open} mountOnEnter unmountOnExit>
+        {/* <Slide direction="down" in={open} mountOnEnter unmountOnExit> */}
           <StyledSearchbar>
             <Input
               autoFocus
               fullWidth
               disableUnderline
-              placeholder="Search…"
+              placeholder="Find Doctors"
               startAdornment={
                 <InputAdornment position="start">
                   <Iconify
@@ -76,11 +92,13 @@ export default function Searchbar() {
               }
               sx={{ mr: 1, fontWeight: 'fontWeightBold' }}
             />
+             <Separator />
+             <LocationText>Location</LocationText>
             <Button variant="contained" onClick={handleClose}>
               Search
             </Button>
           </StyledSearchbar>
-        </Slide>
+        {/* </Slide> */}
       </div>
     </ClickAwayListener>
   );

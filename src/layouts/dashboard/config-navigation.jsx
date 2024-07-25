@@ -13,35 +13,35 @@ const navConfig = [
     icon: icon('ic_analytics'),
   },
   {
-    title: 'Lead',
-    path: '/lead',
+    title: 'Calender',
+    path: '/calender',
+    icon: icon('ic_calender'),
+  },
+  {
+    title: 'Profile',
+    path: '/profile',
     icon: icon('ic_user'),
   },
   {
-    title: 'Investor',
-    path: '/investor',
-    icon: icon('ic_user'),
+    title: 'Help',
+    path: '/help',
+    icon: icon('ic_help'),
   },
   {
-    title: 'Investment',
-    path: '/investment',
-    icon: icon('ic_user'),
-  },
-  {
-    title: 'Employee',
-    path: '/employee',
-    icon: icon('ic_user'),
+    title: 'Logout',
+    path: '/logout',
+    icon: icon('ic_lock'),
   },
   // {
   //   title: 'product',
   //   path: '/products',
   //   icon: icon('ic_cart'),
   // },
-  {
-    title: 'blog',
-    path: '/blog',
-    icon: icon('ic_blog'),
-  },
+  // {
+  //   title: 'blog',
+  //   path: '/blog',
+  //   icon: icon('ic_blog'),
+  // },
   // {
   //   title: 'login',
   //   path: '/login',
